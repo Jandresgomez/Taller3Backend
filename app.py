@@ -83,8 +83,9 @@ def like_movie():
 @app.route('/dislike', methods=['POST'])
 @cross_origin()
 def dislike_movie():
-    userId = request.form['userId']
-    movieId = request.form['movieId']
+    req_data = request.json
+    userId = req_data.userId
+    movieId = req_data.movieId
     controller.dislike_movie(users_col, userId, movieId)
     return Response(json.dumps({ 'msg': 'Updated'}), status=200, mimetype='application/json')
 
