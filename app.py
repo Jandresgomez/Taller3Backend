@@ -22,11 +22,20 @@ CORS(app)
 @app.route('/login/<userId>', methods=['GET'])
 @cross_origin()
 def login(userId=None):
-    user_data = controller.getUserByUserId(users_col, userId)
+    user_data = controller.get_user_by_id(users_col, userId)
     if not user_data:
         return Response(json.dumps({ 'msg': 'Access Denied' }), status=401, mimetype='application/json')
     else:
         return Response(json.dumps(user_data), status=200, mimetype='application/json')
+
+@app.route('/movie/<movieId>', methods=['GET'])
+@cross_origin()
+def get_movie(movieId=None):
+    movie_data = controller.find_movie_by_id(movies_col, movieId)
+    if not movie_data:
+        return Response(json.dumps({ 'msg': 'No movie was found' }), status=404, mimetype='application/json')
+    else:
+        return Response(json.dumps(movie_data), status=200, mimetype='application/json')
 
 @app.route('/movies', methods=['GET'])
 @cross_origin()
@@ -39,6 +48,12 @@ def find_movies():
         except:
             page = 0
     results_list = controller.find_movies_with_partial(movies_col, partial_name, page, 100)
+    return Response(json.dumps(results_list), status=200, mimetype='application/json')
+
+@app.route('/history/<userId>', methods=['GET'])
+@cross_origin()
+def get_user_history(userId=""):
+    results_list = controller.get_history(movies_col, users_col, userId)
     return Response(json.dumps(results_list), status=200, mimetype='application/json')
 
 if __name__ == "__main__":
