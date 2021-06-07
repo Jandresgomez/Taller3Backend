@@ -21,4 +21,5 @@ def get_recommendations_list(neo_db, id_list):
 def filtered_recommendations(neo_db, prev_list, banned_list):
 	recoms_df = get_recommendations_list(neo_db, prev_list)
 	recoms_df = recoms_df[np.isin(recoms_df['MovieId'], banned_list, invert=True)]
-	return list(recoms_df['MovieId'])
+	recom_ids = map(lambda x: str(int(x)), list(recoms_df['MovieId']))
+	return list(recom_ids)
