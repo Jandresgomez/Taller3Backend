@@ -26,13 +26,17 @@ def get_recommedations(db_movies, db_users, db_neo, userId):
     user_data = get_user_by_id(db_users, userId)
     if not user_data:
         return []   
+
     liked_ids = user_data['liked']
     disliked_ids = user_data['disliked']
     window = user_data['window']
-    recom_ids = recommender.filtered_recommendations(db_neo, liked_ids, disliked_ids)
     random.seed(window)
-    recom_ids = random.sample(recom_ids, 10)
-    res = db_movies.find({"_id" : {"$in" : recom_ids}}).limit(200)
+    
+    liked_ids = random.sample(liked_ids, min(3, len(liked_ids)))
+    recom_ids = recommender.filtered_recommendations(db_neo, liked_ids, disliked_ids)
+    recom_ids = random.sample(recom_ids, min(10, len(recom_ids)))
+    
+    res = db_movies.find({"_id" : {"$in" : recom_ids}})
     if not res is None:
         res = list(res)
         return res
