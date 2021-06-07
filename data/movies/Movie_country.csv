@@ -1,0 +1,499 @@
+﻿MovieId,country
+324,Australia
+522,Australia
+853,Australia
+1585,Australia
+1793,Australia
+3515,Australia
+178,Canada
+610,Canada
+663,Canada
+1502,Canada
+1988,Canada
+2759,Canada
+2774,Canada
+2960,Canada
+3036,Canada
+3913,Canada
+30,China
+828,Czech Republic
+1482,Czech Republic
+286,Denmark
+3443,Finland
+12,France
+680,France
+823,France
+1654,France
+2793,France
+3053,France
+3262,France
+3636,France
+3687,France
+3874,France
+3317,Germany
+3920,Germany
+309,Hong Kong
+953,Hong Kong
+1280,Hong Kong
+111,India
+1414,India
+2027,India
+3257,India
+1859,Iran
+222,Ireland
+2141,Ireland
+2992,Ireland
+365,Italy
+615,Italy
+841,Italy
+878,Italy
+2283,Italy
+2436,Italy
+219,Japan
+1809,Japan
+2624,Japan
+799,New Zealand
+1241,New Zealand
+1889,Norway
+469,Portugal
+657,South Africa
+3681,Spain
+872,Taiwan
+117,United Kingdom
+211,United Kingdom
+319,United Kingdom
+346,United Kingdom
+421,United Kingdom
+452,United Kingdom
+497,United Kingdom
+530,United Kingdom
+546,United Kingdom
+661,United Kingdom
+700,United Kingdom
+720,United Kingdom
+865,United Kingdom
+1224,United Kingdom
+1350,United Kingdom
+1419,United Kingdom
+1641,United Kingdom
+1665,United Kingdom
+1749,United Kingdom
+1770,United Kingdom
+1814,United Kingdom
+1949,United Kingdom
+2062,United Kingdom
+2123,United Kingdom
+2211,United Kingdom
+2215,United Kingdom
+2216,United Kingdom
+2217,United Kingdom
+2219,United Kingdom
+2337,United Kingdom
+2481,United Kingdom
+2611,United Kingdom
+2634,United Kingdom
+2768,United Kingdom
+3049,United Kingdom
+3137,United Kingdom
+3215,United Kingdom
+3221,United Kingdom
+3223,United Kingdom
+3229,United Kingdom
+3239,United Kingdom
+3285,United Kingdom
+3295,United Kingdom
+3336,United Kingdom
+3612,United Kingdom
+3668,United Kingdom
+3823,United Kingdom
+3831,United Kingdom
+3835,United Kingdom
+2,United States
+6,United States
+14,United States
+18,United States
+46,United States
+55,United States
+74,United States
+94,United States
+107,United States
+113,United States
+150,United States
+156,United States
+158,United States
+175,United States
+176,United States
+180,United States
+216,United States
+218,United States
+223,United States
+231,United States
+252,United States
+270,United States
+276,United States
+289,United States
+297,United States
+304,United States
+310,United States
+327,United States
+336,United States
+343,United States
+349,United States
+354,United States
+380,United States
+383,United States
+396,United States
+401,United States
+412,United States
+413,United States
+431,United States
+434,United States
+435,United States
+444,United States
+445,United States
+450,United States
+453,United States
+457,United States
+461,United States
+471,United States
+481,United States
+485,United States
+487,United States
+524,United States
+525,United States
+539,United States
+543,United States
+555,United States
+593,United States
+597,United States
+685,United States
+692,United States
+708,United States
+724,United States
+732,United States
+752,United States
+762,United States
+777,United States
+802,United States
+805,United States
+813,United States
+834,United States
+842,United States
+864,United States
+877,United States
+891,United States
+912,United States
+934,United States
+936,United States
+997,United States
+1008,United States
+1015,United States
+1022,United States
+1023,United States
+1026,United States
+1027,United States
+1031,United States
+1032,United States
+1044,United States
+1060,United States
+1071,United States
+1076,United States
+1089,United States
+1099,United States
+1127,United States
+1137,United States
+1167,United States
+1207,United States
+1220,United States
+1226,United States
+1235,United States
+1245,United States
+1250,United States
+1257,United States
+1268,United States
+1278,United States
+1290,United States
+1332,United States
+1341,United States
+1346,United States
+1352,United States
+1355,United States
+1359,United States
+1383,United States
+1389,United States
+1391,United States
+1394,United States
+1411,United States
+1431,United States
+1438,United States
+1453,United States
+1457,United States
+1495,United States
+1499,United States
+1500,United States
+1513,United States
+1529,United States
+1535,United States
+1552,United States
+1555,United States
+1589,United States
+1593,United States
+1601,United States
+1608,United States
+1609,United States
+1610,United States
+1623,United States
+1652,United States
+1653,United States
+1662,United States
+1666,United States
+1673,United States
+1681,United States
+1693,United States
+1704,United States
+1707,United States
+1711,United States
+1717,United States
+1726,United States
+1750,United States
+1765,United States
+1769,United States
+1779,United States
+1784,United States
+1792,United States
+1797,United States
+1801,United States
+1807,United States
+1820,United States
+1821,United States
+1836,United States
+1839,United States
+1850,United States
+1865,United States
+1869,United States
+1876,United States
+1881,United States
+1884,United States
+1888,United States
+1895,United States
+1921,United States
+1950,United States
+1968,United States
+1969,United States
+1970,United States
+1971,United States
+1974,United States
+1975,United States
+1976,United States
+1977,United States
+1978,United States
+1979,United States
+2002,United States
+2004,United States
+2006,United States
+2015,United States
+2024,United States
+2032,United States
+2033,United States
+2037,United States
+2044,United States
+2046,United States
+2048,United States
+2053,United States
+2054,United States
+2055,United States
+2056,United States
+2057,United States
+2059,United States
+2080,United States
+2083,United States
+2089,United States
+2090,United States
+2094,United States
+2096,United States
+2104,United States
+2110,United States
+2112,United States
+2121,United States
+2144,United States
+2145,United States
+2146,United States
+2149,United States
+2153,United States
+2174,United States
+2184,United States
+2193,United States
+2199,United States
+2244,United States
+2245,United States
+2250,United States
+2252,United States
+2264,United States
+2265,United States
+2275,United States
+2294,United States
+2296,United States
+2304,United States
+2316,United States
+2317,United States
+2321,United States
+2335,United States
+2352,United States
+2355,United States
+2371,United States
+2372,United States
+2393,United States
+2402,United States
+2403,United States
+2404,United States
+2407,United States
+2408,United States
+2409,United States
+2410,United States
+2428,United States
+2429,United States
+2430,United States
+2431,United States
+2440,United States
+2450,United States
+2457,United States
+2460,United States
+2502,United States
+2506,United States
+2548,United States
+2568,United States
+2574,United States
+2581,United States
+2590,United States
+2596,United States
+2606,United States
+2674,United States
+2683,United States
+2689,United States
+2706,United States
+2709,United States
+2713,United States
+2735,United States
+2737,United States
+2755,United States
+2763,United States
+2770,United States
+2772,United States
+2777,United States
+2806,United States
+2826,United States
+2831,United States
+2836,United States
+2863,United States
+2891,United States
+2902,United States
+2903,United States
+2918,United States
+2928,United States
+2937,United States
+2945,United States
+2953,United States
+2963,United States
+2966,United States
+2978,United States
+2986,United States
+2987,United States
+2997,United States
+3006,United States
+3019,United States
+3034,United States
+3048,United States
+3050,United States
+3051,United States
+3052,United States
+3081,United States
+3104,United States
+3105,United States
+3109,United States
+3113,United States
+3114,United States
+3117,United States
+3125,United States
+3132,United States
+3138,United States
+3146,United States
+3159,United States
+3178,United States
+3210,United States
+3214,United States
+3256,United States
+3259,United States
+3264,United States
+3273,United States
+3286,United States
+3325,United States
+3330,United States
+3343,United States
+3347,United States
+3354,United States
+3377,United States
+3384,United States
+3397,United States
+3398,United States
+3401,United States
+3404,United States
+3409,United States
+3421,United States
+3424,United States
+3425,United States
+3432,United States
+3441,United States
+3452,United States
+3462,United States
+3478,United States
+3481,United States
+3483,United States
+3489,United States
+3491,United States
+3499,United States
+3511,United States
+3520,United States
+3525,United States
+3527,United States
+3531,United States
+3550,United States
+3556,United States
+3585,United States
+3596,United States
+3608,United States
+3615,United States
+3654,United States
+3669,United States
+3678,United States
+3680,United States
+3683,United States
+3685,United States
+3690,United States
+3691,United States
+3692,United States
+3696,United States
+3701,United States
+3708,United States
+3715,United States
+3741,United States
+3745,United States
+3776,United States
+3789,United States
+3793,United States
+3801,United States
+3803,United States
+3806,United States
+3809,United States
+3820,United States
+3824,United States
+3825,United States
+3828,United States
+3836,United States
+3841,United States
+3898,United States
+3901,United States
+3916,United States
+3923,United States
+3925,United States
+3928,United States
+2162,West Germany
