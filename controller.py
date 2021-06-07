@@ -111,9 +111,6 @@ def dislike_movie(db_users, userId, movieId):
     user_data = get_user_by_id(db_users, userId)
     if not user_data:
         return False
-    movie_data = find_movie_by_id(db_movies, movieId)
-    if not movie_data:
-        return False
 
     new_liked = user_data['liked']
     if movieId in new_liked:
