@@ -1,5 +1,6 @@
 import re
 import random
+import numpy as np
 import actions_collections as actions
 import recommender.recommendations_generator as recommender
 
@@ -51,9 +52,10 @@ def get_recommedations(db_movies, db_users, db_neo, userId):
     window = user_data['window']
     random.seed(window)
 
+    merge_ids = np.concatenate((liked_ids, disliked_ids))
     liked_ids = random.sample(liked_ids, min(3, len(liked_ids)))
     recom_ids = recommender.filtered_recommendations(
-        db_neo, liked_ids, disliked_ids)
+        db_neo, liked_ids, merge_ids)
     recom_ids = random.sample(recom_ids, min(10, len(recom_ids)))
 
     res = db_movies.find({"_id": {"$in": recom_ids}})
