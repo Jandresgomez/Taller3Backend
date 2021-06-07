@@ -82,7 +82,10 @@ def generateReviewsDocs():
                 'userId': userId,
                 'genre_dist': {},
                 'reviews': {},
+                'window': 0,
                 'reviews_list': [],
+                'disliked': [],
+                'liked': [],
             }
         
         movie = None
@@ -117,6 +120,8 @@ def generateUserAndMovieDocs():
             movie['reviews'] = movie_reviews[movieId]['reviews']
             movie['reviews_list'] = movie_reviews[movieId]['reviews_list']
         else:
+            movie['reviews'] = {}
+            movie['reviews_list'] = []
             count_noreviews += 1
             print(f'STFU mate, movie {movie} not in reviews bro!')
         movies[movieId] = movie

@@ -16,6 +16,7 @@ def update_reviews_user(movieId, rating, user):
     p_user = copy.copy(user)
     p_user['reviews'][movieId] = rating
     p_user['reviews_list'].append((movieId, rating))
+    p_user['liked'].append((movieId))
     return p_user
 
 def update_reviews_movie(userId, rating, movie):

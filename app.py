@@ -3,9 +3,12 @@ from pymongo import MongoClient
 from flask import Flask, Response
 from flask_cors import CORS, cross_origin
 from flask import request
+from recommender.neo4jquery import OntologyRecomendations
 import json
 import controller
 
+# Load neo4j database
+neo_db = OntologyRecomendations("bolt://localhost:8001")
 # Load mongodb credentials
 config = dotenv_values(".env")
 username = config['USER']
@@ -54,6 +57,12 @@ def find_movies():
 @cross_origin()
 def get_user_history(userId=""):
     results_list = controller.get_history(movies_col, users_col, userId)
+    return Response(json.dumps(results_list), status=200, mimetype='application/json')
+
+@app.route('/recommendations/<userId>', methods=['GET'])
+@cross_origin()
+def get_recommedations(userId=""):
+    results_list = controller.get_recommedations(movies_col, users_col, neo_db, userId)
     return Response(json.dumps(results_list), status=200, mimetype='application/json')
 
 if __name__ == "__main__":
