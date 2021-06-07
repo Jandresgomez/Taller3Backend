@@ -65,10 +65,9 @@ def get_recommedations(userId=""):
     results_list = controller.get_recommedations(movies_col, users_col, neo_db, userId)
     return Response(json.dumps(results_list), status=200, mimetype='application/json')
 
-@app.route('/push', methods=['POST'])
-@cross_origin()
+@app.route('/push/<userId>', methods=['POST'])
+@cross_origin(userId="")
 def update_recommendatons():
-    userId = request.form['userId']
     controller.update_recom_window(users_col, userId)
     return Response(json.dumps({ 'msg': 'Updated'}), status=200, mimetype='application/json')
 
