@@ -65,5 +65,28 @@ def get_recommedations(userId=""):
     results_list = controller.get_recommedations(movies_col, users_col, neo_db, userId)
     return Response(json.dumps(results_list), status=200, mimetype='application/json')
 
+@app.route('/push', methods=['POST'])
+@cross_origin()
+def update_recommendatons():
+    userId = request.form['userId']
+    controller.update_recom_window(users_col, userId)
+    return Response(json.dumps({ 'msg': 'Updated'}), status=200, mimetype='application/json')
+
+@app.route('/like', methods=['POST'])
+@cross_origin()
+def like_movie():
+    userId = request.form['userId']
+    movieId = request.form['movieId']
+    controller.like_movie(users_col, movies_col, userId, movieId)
+    return Response(json.dumps({ 'msg': 'Updated'}), status=200, mimetype='application/json')
+
+@app.route('/dislike', methods=['POST'])
+@cross_origin()
+def dislike_movie():
+    userId = request.form['userId']
+    movieId = request.form['movieId']
+    controller.dislike_movie(users_col, userId, movieId)
+    return Response(json.dumps({ 'msg': 'Updated'}), status=200, mimetype='application/json')
+
 if __name__ == "__main__":
     app.run(debug=True, use_debugger=False, use_reloader=True, host="0.0.0.0", port=5000)
