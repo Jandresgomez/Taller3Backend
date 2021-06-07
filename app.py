@@ -78,6 +78,9 @@ def get_user_history(userId=""):
 @cross_origin()
 def get_recommedations(userId=""):
     results_list = controller.get_recommedations(movies_col, users_col, neo_db, userId)
+    if not results_list or len(results_list) == 0:
+        results_list = controller.find_top_movies(movies_col, 10)
+        return Response(json.dumps(results_list), status=200, mimetype='application/json')
     return Response(json.dumps(results_list), status=200, mimetype='application/json')
 
 @app.route('/push/<userId>', methods=['GET'])

@@ -48,6 +48,8 @@ def get_recommedations(db_movies, db_users, db_neo, userId):
         return []
 
     liked_ids = user_data['liked']
+    if len(liked_ids) == 0:
+        return False
     disliked_ids = user_data['disliked']
     window = user_data['window']
     random.seed(window)
