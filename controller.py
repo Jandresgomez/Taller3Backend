@@ -13,6 +13,21 @@ def get_user_by_id(db, userId):
     return False
 
 
+def create_user_with_id(db, userId):
+    user = {
+        '_id': userId,
+        'userId': userId,
+        'genre_dist': {},
+        'reviews': {},
+        'window': 0,
+        'reviews_list': [],
+        'disliked': [],
+        'liked': [],
+    }
+    db.insert_one(user)
+    return user
+
+
 def get_history(db_movies, db_users, userId):
     user_data = get_user_by_id(db_users, userId)
     if not user_data:
@@ -80,7 +95,7 @@ def like_movie(db_users, db_movies, userId, movieId):
     movie_data = find_movie_by_id(db_movies, movieId)
     if not movie_data:
         return False
-    
+
     new_disliked = list(filter(lambda a: a != movieId, user_data['disliked']))
     new_liked = list(filter(lambda a: a != movieId, user_data['liked']))
     new_liked.append(movieId)
@@ -107,6 +122,7 @@ def like_movie(db_users, db_movies, userId, movieId):
     })
     return True
 
+
 def dislike_movie(db_users, userId, movieId):
     user_data = get_user_by_id(db_users, userId)
     if not user_data:
@@ -123,8 +139,9 @@ def dislike_movie(db_users, userId, movieId):
         }
     })
 
+
 def find_top_movies(db_movie, size):
-    res = db_movie.find().sort({ "$orderby": { "cant_reviews" : -1 }}).limit(size)
+    res = db_movie.find().sort({"$orderby": {"cant_reviews": -1}}).limit(size)
     if not res is None:
         res = list(res)
         return res

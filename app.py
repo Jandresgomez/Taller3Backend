@@ -31,6 +31,15 @@ def login(userId=None):
     else:
         return Response(json.dumps(user_data), status=200, mimetype='application/json')
 
+@app.route('/signup/<userId>', methods=['GET'])
+@cross_origin()
+def login(userId=None):
+    user_data = controller.create_user_with_id(users_col, userId)
+    if not user_data:
+        return Response(json.dumps({ 'msg': 'Failed to create' }), status=401, mimetype='application/json')
+    else:
+        return Response(json.dumps(user_data), status=200, mimetype='application/json')
+
 @app.route('/movie/<movieId>', methods=['GET'])
 @cross_origin()
 def get_movie(movieId=None):
