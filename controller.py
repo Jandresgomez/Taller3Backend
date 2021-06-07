@@ -81,9 +81,7 @@ def like_movie(db_users, db_movies, userId, movieId):
     if not movie_data:
         return False
     
-    new_disliked = user_data['disliked']
-    if movieId in new_disliked:
-        new_disliked.remove(movieId)
+    new_disliked = list(filter(lambda a: a != movieId, user_data['disliked']))
     genre_dist = actions.update_genre_dist(movie_data['genres'], user_data)
 
     db_users.update({'_id': userId}, {
@@ -112,9 +110,7 @@ def dislike_movie(db_users, userId, movieId):
     if not user_data:
         return False
 
-    new_liked = user_data['liked']
-    if movieId in new_liked:
-        new_liked.remove(movieId)
+    new_liked = list(filter(lambda a: a != movieId, user_data['liked']))
 
     db_users.update({'_id': userId}, {
         '$push': {
