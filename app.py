@@ -84,6 +84,7 @@ def like_movie():
 @cross_origin()
 def dislike_movie():
     req_data = request.json
+    print(req_data)
     userId = req_data.userId
     movieId = req_data.movieId
     controller.dislike_movie(users_col, userId, movieId)
