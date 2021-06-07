@@ -122,3 +122,9 @@ def dislike_movie(db_users, userId, movieId):
             'disliked': new_disliked,
         }
     })
+
+def find_top_movies(db_movie, size):
+    res = db_movie.find().sort({ "$orderby": { "cant_reviews" : -1 }}).limit(size)
+    if not res is None:
+        res = list(res)
+        return res

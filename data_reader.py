@@ -93,6 +93,7 @@ def generateReviewsDocs():
             movie = movie_reviews[movieId]
         else:
             movie = {
+                'cant_reviews': 0,
                 'reviews': {},
                 'reviews_list': [],
             }
@@ -103,6 +104,7 @@ def generateReviewsDocs():
         users[userId] = user
         
         movie = db_actions.update_reviews_movie(userId, row[2], movie)
+        movie['cant_reviews'] = movie['cant_reviews']+1
         movie_reviews[movieId] = movie
 
         count += 1
@@ -119,9 +121,11 @@ def generateUserAndMovieDocs():
         if movieId in movie_reviews:
             movie['reviews'] = movie_reviews[movieId]['reviews']
             movie['reviews_list'] = movie_reviews[movieId]['reviews_list']
+            movie['cant_reviews'] = movie_reviews[movieId]['cant_reviews']
         else:
             movie['reviews'] = {}
             movie['reviews_list'] = []
+            movie['cant_reviews'] = 0
             count_noreviews += 1
             print(f'STFU mate, movie {movie} not in reviews bro!')
         movies[movieId] = movie

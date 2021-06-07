@@ -53,6 +53,12 @@ def find_movies():
     results_list = controller.find_movies_with_partial(movies_col, partial_name, page, 100)
     return Response(json.dumps(results_list), status=200, mimetype='application/json')
 
+@app.route('/top', methods=['GET'])
+@cross_origin()
+def get_top_movies():
+    results_list = controller.find_top_movies(movies_col, 10)
+    return Response(json.dumps(results_list), status=200, mimetype='application/json')
+
 @app.route('/history/<userId>', methods=['GET'])
 @cross_origin()
 def get_user_history(userId=""):
